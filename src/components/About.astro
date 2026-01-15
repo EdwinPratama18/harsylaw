@@ -1,0 +1,95 @@
+---
+---
+
+<section id="tentang" class="py-32 bg-white relative overflow-hidden">
+    <!-- Decorative Background -->
+    <div class="legal-pattern absolute inset-0 opacity-40 pointer-events-none"></div>
+    <!-- Simple gradient blobs for modern feel -->
+    <div class="absolute top-0 right-0 -mr-20 -mt-20 w-80 h-80 bg-amber-400/10 rounded-full blur-3xl pointer-events-none"></div>
+    <div class="absolute bottom-0 left-0 -ml-20 -mb-20 w-80 h-80 bg-slate-900/5 rounded-full blur-3xl pointer-events-none"></div>
+
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        <!-- Header & Description (Centered) -->
+        <div class="text-center max-w-3xl mx-auto mb-16 reveal">
+            <span class="gold-text uppercase tracking-[0.5em] text-[10px] font-bold mb-4 block">Tentang Kami</span>
+            <h2 class="serif-title text-4xl md:text-5xl font-bold text-slate-900 mb-8 italic">
+                Harsy Law Firm
+            </h2>
+            
+            <div class="text-slate-600 font-light text-lg leading-relaxed text-justify">
+                <p>
+                    <span class="font-semibold text-slate-900">Harsy Law</span> adalah firma hukum yang berdedikasi memberikan solusi hukum yang jujur, tepat, dan terpercaya. Kami percaya bahwa keadilan adalah hak setiap individu, dan kami hadir untuk memastikan hak tersebut terlindungi melalui pendekatan hukum yang profesional dan solutif.
+                </p>
+            </div>
+        </div>
+
+        <!-- Vision & Mission Cards -->
+        <div class="grid md:grid-cols-2 gap-8 reveal delay-200">
+            <!-- Vision Card -->
+            <div class="bg-white rounded-2xl p-8 border border-slate-100 shadow-lg shadow-slate-200/50 hover:shadow-xl transition-shadow relative overflow-hidden group">
+                <div class="absolute top-0 right-0 p-4 opacity-5 group-hover:opacity-10 transition-opacity">
+                    <i class="fa-solid fa-eye text-8xl text-indigo-900"></i>
+                </div>
+                <h3 class="serif-title text-2xl font-bold text-slate-900 mb-4 flex items-center justify-center gap-3">
+                    Visi Kami
+                </h3>
+                <p class="text-slate-600 font-light leading-relaxed">
+                    Menjadi mitra hukum terpercaya yang menjunjung tinggi integritas, keadilan, dan profesionalisme dalam setiap langkah pendampingan hukum.
+                </p>
+            </div>
+
+            <!-- Mission Card -->
+            <div class="bg-navy-bg rounded-2xl p-8 text-white shadow-xl shadow-slate-900/10 relative overflow-hidden group">
+                <div class="absolute bottom-0 right-0 p-4 opacity-5 group-hover:opacity-10 transition-opacity">
+                    <i class="fa-solid fa-mountain text-8xl text-white"></i>
+                </div>
+                <!-- Custom style for the navy card items since background is dark -->
+                <style>
+                    .bg-navy-bg { background-color: var(--navy); }
+                </style>
+                <h3 class="serif-title text-2xl font-bold text-white mb-6 flex items-center justify-center gap-3">
+                    Misi Kami
+                </h3>
+                <ul class="space-y-4">
+                    <li class="flex gap-3 text-slate-300 font-light text-sm md:text-base">
+                        <i class="fa-solid fa-check text-amber-400 mt-1"></i>
+                        <span>Memberikan layanan hukum yang responsif, berkualitas, dan berorientasi pada kepentingan klien.</span>
+                    </li>
+                    <li class="flex gap-3 text-slate-300 font-light text-sm md:text-base">
+                        <i class="fa-solid fa-check text-amber-400 mt-1"></i>
+                        <span>Mendampingi dan membela hak klien dengan integritas dan keahlian tinggi.</span>
+                    </li>
+                    <li class="flex gap-3 text-slate-300 font-light text-sm md:text-base">
+                        <i class="fa-solid fa-check text-amber-400 mt-1"></i>
+                        <span>Meningkatkan literasi hukum masyarakat melalui edukasi dan informasi hukum yang mudah diakses.</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+
+<script>
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('active');
+            }
+        });
+    }, { threshold: 0.15 });
+
+    document.querySelectorAll('#tentang .reveal').forEach((el) => observer.observe(el));
+</script>
+
+<style>
+    .reveal {
+        opacity: 0;
+        transform: translateY(30px);
+        transition: all 1s cubic-bezier(0.2, 1, 0.3, 1);
+    }
+    .reveal.active {
+        opacity: 1;
+        transform: translateY(0);
+    }
+    .delay-200 { transition-delay: 200ms; }
+</style>

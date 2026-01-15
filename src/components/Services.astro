@@ -1,0 +1,149 @@
+---
+const services = [
+    {
+        icon: `<i class="fa-solid fa-scale-balanced text-3xl"></i>`,
+        title: "Hukum Perdata",
+        description: "Layanan terkait sengketa antar individu atau badan hukum.",
+        items: [
+            "Sengketa perjanjian atau kontrak",
+            "Wanprestasi (ingkar janji)",
+            "Sengketa tanah & properti",
+            "Ganti rugi perdata",
+            "Gugatan perdata ke pengadilan"
+        ]
+    },
+    {
+        icon: `<i class="fa-solid fa-gavel text-3xl"></i>`,
+        title: "Hukum Pidana",
+        description: "Pendampingan klien sebagai Pelapor, Terlapor, Tersangka, atau Terdakwa.",
+        items: [
+            "Kasus pencurian, penipuan, penggelapan",
+            "Kekerasan, pelecehan seksual",
+            "Narkotika dan psikotropika",
+            "Tindak pidana korupsi (Tipikor)",
+            "Pendampingan pemeriksaan polisi"
+        ]
+    },
+    {
+        icon: `<i class="fa-solid fa-users text-3xl"></i>`,
+        title: "Hukum Keluarga",
+        description: "Layanan hukum keluarga yang dekat dengan masyarakat.",
+        items: [
+            "Perceraian & Hak asuh anak",
+            "Nafkah anak & istri",
+            "Pembagian harta gono-gini",
+            "Warisan & hibah",
+            "Sengketa keluarga"
+        ]
+    },
+    {
+        icon: `<i class="fa-solid fa-briefcase text-3xl"></i>`,
+        title: "Hukum Bisnis / Korporasi",
+        description: "Layanan hukum untuk entitas usaha dan perusahaan.",
+        items: [
+            "Drafting dan review kontrak bisnis",
+            "Perpajakan & kepatuhan hukum",
+            "Merger & Akuisisi",
+            "PKPU dan Kepailitan"
+        ]
+    },
+    {
+        icon: `<i class="fa-solid fa-user-tie text-3xl"></i>`,
+        title: "Hukum Tenaga Kerja",
+        description: "Solusi hukum ketenagakerjaan antara pekerja dan pengusaha.",
+        items: [
+            "Sengketa pekerja & pengusaha",
+            "PHK dan pesangon",
+            "Perjanjian kerja & outsourcing",
+            "Serikat pekerja & perundingan",
+            "Konsultasi peraturan ketenagakerjaan"
+        ]
+    },
+    {
+        icon: `<i class="fa-solid fa-handshake text-3xl"></i>`,
+        title: "Non-Litigasi",
+        description: "Penyelesaian sengketa melalui jalur di luar pengadilan.",
+        items: [
+            "Mediasi",
+            "Arbitrase (misalnya BANI)",
+            "Negosiasi hukum"
+        ]
+    },
+    {
+        icon: `<i class="fa-solid fa-landmark text-3xl"></i>`,
+        title: "Administrasi Negara",
+        description: "Penyelesaian sengketa tata usaha negara dan perizinan.",
+        items: [
+            "Sengketa pemerintah / pejabat",
+            "Gugatan ke PTUN",
+            "Hukum perizinan & kebijakan"
+        ]
+    }
+];
+---
+
+<section id="layanan" class="py-32 bg-slate-50 legal-pattern">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-16 reveal">
+            <span class="gold-text uppercase tracking-[0.5em] text-[10px] font-bold mb-4 block">Our Expertise</span>
+            <h2 class="serif-title text-5xl font-bold text-slate-900 italic">Layanan Hukum</h2>
+        </div>
+
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {services.map((service) => (
+                <div class="group h-full bg-white rounded-3xl p-8 border border-slate-100 shadow-md hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 reveal flex flex-col relative overflow-hidden">
+                    {/* Header: Icon & Title */}
+                    <div class="flex items-start justify-between mb-6">
+                        <div class="w-16 h-16 rounded-2xl gold-bg/10 flex items-center justify-center shrink-0" style="background: linear-gradient(135deg, rgba(212, 175, 55, 0.1), rgba(212, 175, 55, 0.05));">
+                            <div class="gold-text" set:html={service.icon} />
+                        </div>
+                    </div>
+
+                    <div class="mb-6 flex-grow-0">
+                        <h3 class="serif-title text-2xl font-bold mb-3 text-slate-900 group-hover:text-amber-600 transition-colors min-h-[4rem] flex items-center">{service.title}</h3>
+                        <p class="text-slate-600 leading-relaxed text-sm min-h-[4rem]">
+                            {service.description}
+                        </p>
+                    </div>
+
+                    {/* Divider */}
+                    <div class="w-full h-px bg-slate-100 mb-6"></div>
+
+                    {/* List Items */}
+                    <ul class="space-y-3 flex-grow">
+                        {service.items.map((item) => (
+                            <li class="flex items-start gap-3 text-sm text-slate-600">
+                                <i class="fa-solid fa-check text-amber-500 mt-1 text-xs shrink-0"></i>
+                                <span class="leading-snug">{item}</span>
+                            </li>
+                        ))}
+                    </ul>
+                </div>
+            ))}
+        </div>
+    </div>
+</section>
+
+<style>
+    .reveal {
+        opacity: 0;
+        transform: translateY(30px);
+        transition: all 0.8s cubic-bezier(0.2, 1, 0.3, 1);
+    }
+    .reveal.active {
+        opacity: 1;
+        transform: translateY(0);
+    }
+</style>
+
+<script>
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('active');
+            }
+        });
+    }, { threshold: 0.1 });
+
+    document.querySelectorAll('#layanan .reveal').forEach((el) => observer.observe(el));
+</script>
