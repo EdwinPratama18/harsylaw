@@ -1,75 +1,139 @@
 ---
+
 ---
 
 <nav id="main-nav" class="fixed w-full z-50 transition-all duration-500 py-6">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="grid grid-cols-2 md:grid-cols-3 items-center bg-white/80 backdrop-blur-md border border-white/20 shadow-lg rounded-2xl px-6 md:px-8 h-[88px]">
+        <div
+            class="grid grid-cols-2 md:grid-cols-3 items-center bg-white/80 backdrop-blur-md border border-white/20 shadow-lg rounded-2xl px-6 md:px-8 h-[88px]"
+        >
             <div class="flex items-center gap-4 justify-self-start">
                 <a href="#" class="flex items-center gap-3 group">
-                    <img src="/logo.png" alt="Harsy Law Logo"
-                        class="h-12 md:h-16 w-auto object-contain transition-transform group-hover:scale-105">
+                    <img
+                        src="/logo.png"
+                        alt="Harsy Law Logo"
+                        class="h-12 md:h-16 w-auto object-contain transition-transform group-hover:scale-105"
+                    />
                 </a>
             </div>
 
-            <div class="hidden md:flex justify-center space-x-4 lg:space-x-8 font-medium text-[11px] uppercase tracking-widest text-slate-700 justify-self-center w-full whitespace-nowrap">
-                <a href="#beranda" class="hover:text-slate-900 transition-colors">Beranda</a>
-                <a href="#tentang" class="hover:text-slate-900 transition-colors">Tentang Kami</a>
-                <a href="#layanan" class="hover:text-slate-900 transition-colors">Layanan</a>
-                <a href="#kontak" class="hover:text-slate-900 transition-colors">Kontak</a>
+            <div
+                class="hidden md:flex justify-center space-x-4 lg:space-x-8 font-medium text-[11px] uppercase tracking-widest text-slate-700 justify-self-center w-full whitespace-nowrap"
+            >
+                <a
+                    href="#beranda"
+                    class="hover:text-slate-900 transition-colors">Beranda</a
+                >
+                <a
+                    href="#tentang"
+                    class="hover:text-slate-900 transition-colors"
+                    >Tentang Kami</a
+                >
+                <a
+                    href="#layanan"
+                    class="hover:text-slate-900 transition-colors">Layanan</a
+                >
+                <a href="#kontak" class="hover:text-slate-900 transition-colors"
+                    >Kontak</a
+                >
             </div>
 
             <div class="justify-self-end flex items-center gap-4">
-                <a href="https://wa.me/6281295987278?text=Halo%20Harsy%20Law,%0ASaya%20ingin%20menjadwalkan%20konsultasi%20hukum."
-                    class="navy-bg text-white px-4 md:px-6 py-2 md:py-3 rounded-xl text-[10px] font-bold uppercase tracking-widest hover:brightness-125 transition-all shadow-md active:scale-95 hidden sm:block">
+                <a
+                    href="https://wa.me/6281295987278?text=Halo%20Harsy%20Law,%0ASaya%20ingin%20menjadwalkan%20konsultasi%20hukum."
+                    class="navy-bg text-white px-4 md:px-6 py-2 md:py-3 rounded-xl text-[10px] font-bold uppercase tracking-widest hover:brightness-125 transition-all shadow-md active:scale-95 hidden sm:block"
+                >
                     Konsultasi
                 </a>
-                
+
                 <!-- Mobile Menu Button -->
-                <button id="mobile-menu-btn" class="md:hidden text-slate-900 focus:outline-none p-2">
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-8 h-8">
-                        <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+                <button
+                    id="mobile-menu-btn"
+                    class="md:hidden text-slate-900 focus:outline-none p-2"
+                >
+                    <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                        stroke-width="1.5"
+                        stroke="currentColor"
+                        class="w-8 h-8"
+                    >
+                        <path
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
+                        ></path>
                     </svg>
                 </button>
             </div>
         </div>
 
         <!-- Mobile Menu Dropdown -->
-        <div id="mobile-menu" class="hidden md:hidden absolute top-[100px] left-4 right-4 bg-white/95 backdrop-blur-md border border-slate-100 shadow-xl rounded-2xl p-6 flex-col space-y-4 text-center z-50">
-            <a href="#beranda" class="block text-slate-600 hover:text-slate-900 font-medium uppercase tracking-widest text-xs py-2">Beranda</a>
-            <a href="#tentang" class="block text-slate-600 hover:text-slate-900 font-medium uppercase tracking-widest text-xs py-2">Tentang Kami</a>
-            <a href="#layanan" class="block text-slate-600 hover:text-slate-900 font-medium uppercase tracking-widest text-xs py-2">Layanan</a>
-            <a href="#kontak" class="block text-slate-600 hover:text-slate-900 font-medium uppercase tracking-widest text-xs py-2">Kontak</a>
-            <hr class="border-slate-100">
-            <a href="https://wa.me/6281295987278?text=Halo%20Harsy%20Law,%0ASaya%20ingin%20menjadwalkan%20konsultasi%20hukum."
-               class="navy-bg text-white block px-6 py-3 rounded-xl text-[10px] font-bold uppercase tracking-widest hover:brightness-125 transition-all shadow-md">
+        <div
+            id="mobile-menu"
+            class="hidden md:hidden absolute top-[100px] left-4 right-4 bg-white/95 backdrop-blur-md border border-slate-100 shadow-xl rounded-2xl p-6 flex-col space-y-4 text-center z-50"
+        >
+            <a
+                href="#beranda"
+                class="block text-slate-600 hover:text-slate-900 font-medium uppercase tracking-widest text-xs py-2"
+                >Beranda</a
+            >
+            <a
+                href="#tentang"
+                class="block text-slate-600 hover:text-slate-900 font-medium uppercase tracking-widest text-xs py-2"
+                >Tentang Kami</a
+            >
+            <a
+                href="#layanan"
+                class="block text-slate-600 hover:text-slate-900 font-medium uppercase tracking-widest text-xs py-2"
+                >Layanan</a
+            >
+            <a
+                href="#kontak"
+                class="block text-slate-600 hover:text-slate-900 font-medium uppercase tracking-widest text-xs py-2"
+                >Kontak</a
+            >
+            <hr class="border-slate-100" />
+            <a
+                href="https://wa.me/6281295987278?text=Halo%20Harsy%20Law,%0ASaya%20ingin%20menjadwalkan%20konsultasi%20hukum."
+                class="navy-bg text-white block px-6 py-3 rounded-xl text-[10px] font-bold uppercase tracking-widest hover:brightness-125 transition-all shadow-md"
+            >
                 Konsultasi
             </a>
         </div>
     </div>
 
-<script>
-    const mobileBtn = document.getElementById('mobile-menu-btn');
-    const mobileMenu = document.getElementById('mobile-menu');
+    <script>
+        const mobileBtn = document.getElementById("mobile-menu-btn");
+        const mobileMenu = document.getElementById("mobile-menu");
 
-    if (mobileBtn && mobileMenu) {
-        mobileBtn.addEventListener('click', () => {
-            mobileMenu.classList.toggle('hidden');
-        });
-
-        // Close menu when clicking a link
-        const mobileLinks = mobileMenu.querySelectorAll('a');
-        mobileLinks.forEach(link => {
-            link.addEventListener('click', () => {
-                mobileMenu.classList.add('hidden');
+        if (mobileBtn && mobileMenu) {
+            mobileBtn.addEventListener("click", () => {
+                mobileMenu.classList.toggle("hidden");
             });
-        });
 
-        // Close menu when clicking outside
-        document.addEventListener('click', (e) => {
-            if (!mobileBtn.contains(e.target) && !mobileMenu.contains(e.target)) {
-                mobileMenu.classList.add('hidden');
-            }
-        });
-    }
-</script>
+            // Close menu when clicking a link
+            const mobileLinks = mobileMenu.querySelectorAll("a");
+            mobileLinks.forEach((link) => {
+                link.addEventListener("click", () => {
+                    mobileMenu.classList.add("hidden");
+                });
+            });
+
+            // Close menu when clicking outside
+            document.addEventListener("click", (e) => {
+                if (!(e.target instanceof Node)) return;
+
+                if (
+                    mobileBtn &&
+                    mobileMenu &&
+                    !mobileBtn.contains(e.target) &&
+                    !mobileMenu.contains(e.target)
+                ) {
+                    mobileMenu.classList.add("hidden");
+                }
+            });
+        }
+    </script>
 </nav>
